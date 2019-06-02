@@ -1,0 +1,33 @@
+{
+  "name": "ohat",
+  "version": "1.0.0",
+  "description": "A beginning framework to create an expressjs server that is secured with user authentication and tokens.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bnielsen1965/secure-express-server.git"
+  },
+  "keywords": [
+    "expressjs",
+    "server",
+    "secure",
+    "jwt",
+    "token",
+    "authentication",
+    "user"
+  ],
+  "author": "Bryan Nielsen <bnielsen1965@gmail.com> (https://github.com/bnielsen1965)",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "jwt-async": "^1.1.2",
+    "mute-prompt": "^1.0.0",
+    "nedb": "^1.8.0",
+    "serve-favicon": "^2.5.0"
+  }
+}
