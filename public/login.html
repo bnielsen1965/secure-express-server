@@ -15,16 +15,12 @@
   </style>
   <script>
   (function(window, document, undefined) {
-    console.log('init')
   window.onload = function () {
-    console.log('laoded')
     var username = getQueryVariable('username');
-    console.log(username)
     if (username) {
       document.getElementById('username').value = username;
     }
     var error = getQueryVariable('error');
-    console.log(error)
     if (error) {
       document.getElementById('error').innerHTML = error;
     }
