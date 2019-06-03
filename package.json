@@ -1,5 +1,5 @@
 {
-  "name": "ohat",
+  "name": "secure-express-server",
   "version": "1.0.0",
   "description": "A beginning framework to create an expressjs server that is secured with user authentication and tokens.",
   "main": "server.js",
