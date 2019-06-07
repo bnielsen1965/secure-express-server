@@ -10,6 +10,7 @@ module.exports = {
     noAuthenticationPaths: ['/css', '/images', '/js'],
     homePage: 'index.html',
     loginPage: 'login.html',
-    logoutPage: 'logout.html'
+    logoutPage: 'logout.html',
+    groups: ['admin', 'user']
   }
 };
