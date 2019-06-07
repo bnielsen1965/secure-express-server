@@ -9,11 +9,12 @@ const Path = require('path');
 
 let userNeDB = new UserNeDB({ storagePath: Path.join(__dirname, Config.storageDirectory) });
 let authentication = new Authentication(Object.assign({}, { userStore: userNeDB }, Config.authentication));
-let api = new Api();
-let webServer = new WebServer(Object.assign({}, Config, { //routeConfigureApp: authentication.authenticationRoutes }));
+let api = new Api({ authentication: authentication });
+let webServer = new WebServer(Object.assign({}, Config, {
   routeConfigureApp: (app) => {
+    api.openRoutes(app);
     authentication.authenticationRoutes(app);
-    api.routes(app);
+    api.secureRoutes(app);
   }
 }));
 
