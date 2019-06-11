@@ -2,13 +2,15 @@
 
 const Config = require('./config');
 const UserNeDB = require('./lib/usernedb');
+const SessionNeDB = require('./lib/sessionnedb');
 const Authentication = require('./lib/authentication');
 const WebServer = require('./lib/webserver');
 const Api = require('./lib/api');
 const Path = require('path');
 
 let userNeDB = new UserNeDB({ storagePath: Path.join(__dirname, Config.storageDirectory) });
-let authentication = new Authentication(Object.assign({}, { userStore: userNeDB }, Config.authentication));
+let sessionNeDB = new SessionNeDB({ storagePath: Path.join(__dirname, Config.storageDirectory) });
+let authentication = new Authentication(Object.assign({}, { userStore: userNeDB, sessionStore: sessionNeDB }, Config.authentication));
 let api = new Api({ authentication: authentication });
 let webServer = new WebServer(Object.assign({}, Config, {
   routeConfigureApp: (app) => {
@@ -18,4 +20,4 @@ let webServer = new WebServer(Object.assign({}, Config, {
   }
 }));
 
-webServer.createServer().configureApp().listen().then(() => { console.log('Server up'); });
+webServer.createServer().configureApp().listen().then(port => { console.log('Server up on port ' + port); });
