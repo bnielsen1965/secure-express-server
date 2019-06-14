@@ -1,4 +1,9 @@
-#error {
+#errors {
   color: red;
+  font-weight: bold;
+}
+
+#messages {
+  color: blue;
   font-weight: bold;
 }

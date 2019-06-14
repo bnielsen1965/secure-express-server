@@ -11,6 +11,9 @@ module.exports = {
     homePage: 'index.html',
     loginPage: 'login.html',
     logoutPage: 'logout.html',
-    groups: ['admin', 'user']
+    groups: ['admin', 'user'],
+    jwt: {
+      secret: 'the site jwt secret'
+    }
   }
 };
