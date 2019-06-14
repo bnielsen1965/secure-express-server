@@ -7,3 +7,12 @@
   color: blue;
   font-weight: bold;
 }
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('fonts/Roboto/Roboto-Regular.ttf');
+}
+
+html {
+  font-family: 'Roboto-Regular', Fallback, sans-serif;
+}

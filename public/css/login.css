@@ -1,3 +1,15 @@
+body {
+  text-align: center;;
+}
+
+.loginform {
+  margin: 2em auto;
+  padding: 2em 0;
+  width: 24em;
+  background-color: #eee;
+  border-radius: 10px;
+}
+
 .loginform label {
   display: inline-block;
   width: 6em;
