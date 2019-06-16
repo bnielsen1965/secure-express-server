@@ -1,0 +1,32 @@
+
+#changepasswordform {
+  margin: 1em auto 0 auto;
+}
+#changepasswordform label {
+  width: 12em;
+  height: 1em;
+  float: left;
+}
+
+
+#adduserform {
+  margin: 1em auto 0 auto;
+}
+#adduserform label {
+  width: 12em;
+  height: 1em;
+  float: left;
+}
+
+
+#userlist table {
+  border-collapse: collapse;
+}
+
+#userlist th {
+  padding: 0 15px;
+}
+
+#userlist tr:nth-child(even) {
+  background-color: #eee;
+}

@@ -1,3 +1,14 @@
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+
+html {
+  font-family: 'Roboto-Regular', Fallback, sans-serif;
+}
+
+
 #errors {
   color: red;
   font-weight: bold;
@@ -8,11 +19,12 @@
   font-weight: bold;
 }
 
-@font-face {
-  font-family: 'Roboto-Regular';
-  src: url('fonts/Roboto/Roboto-Regular.ttf');
+
+#menu a {
+  margin: 0 15px 0 0;
 }
 
-html {
-  font-family: 'Roboto-Regular', Fallback, sans-serif;
+
+.secured {
+  display: none;
 }

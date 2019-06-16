@@ -4,17 +4,35 @@
 	<meta charset="utf-8">
   <title>User Settings</title>
   <link rel="stylesheet" type="text/css" href="css/index.css">
-  <link rel="stylesheet" type="text/css" href="css/login.css">
+  <link rel="stylesheet" type="text/css" href="css/usersettings.css">
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/common.js"></script>
   <script src="js/usersettings.js"></script>
 </head>
 <body>
-  <div>
+  <div id="menu"></div>
+  <div id="changepasswordform">
     <label for="oldpassword">Old Password: </label><input type="password" id="oldpassword" name="oldpassword"><br>
     <label for="newpassword">New Password: </label><input type="password" id="newpassword" name="newpassword"><br>
     <label for="confirmpassword">Confirm Password: </label><input type="password" id="confirmpassword" name="confirmpassword"><br>
-    <button type="button" id="changepassword">Change Password</button>
+    <label></label><button type="button" id="changepassword">Change Password</button>
+  </div>
+
+  <div class="secured group-admin">
+    <div id="adduserform">
+      <label for="addusername">Username: </label><input id="addusername" name="addusername"><br>
+      <label for="addgroup">Group: </label><select id="addgroup" name="addgroup">
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+      </select><br>
+      <label for="addpassword">Password: </label><input type="password" id="addpassword" name="addpassword"><br>
+      <label for="addconfirmpassword">Confirm Password: </label><input type="password" id="addconfirmpassword" name="addconfirmpassword"><br>
+      <label></label><button type="button" id="adduser">Add User</button>
+    </div>
+
+    <div id="userlist">
+
+    </div>
   </div>
 
   <div id="errors"></div>

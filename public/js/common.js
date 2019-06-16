@@ -24,6 +24,25 @@ function clearAll () {
   clearErrors();
 }
 
+
+$(document).ready(function () {
+  showMenu();
+});
+
+function showMenu () {
+  let menuItems = [{ label: 'Home', link: 'index.html' }, { label: 'Settings', link: 'usersettings.html' }, { label: 'Logout', link: 'logout.html' }];
+  menuItems.forEach(function (item) {
+    $('#menu').append('<a href="' + item.link + '">' + item.label + '</a>');
+  });
+}
+
+
+function showSecured (groups) {
+  groups.forEach(function (group) {
+    $('.group-' + group).removeClass('secured');
+  });
+}
+
 function apiCall (method, path, data, callback) {
   $.ajax({
     url: 'api/' + path,
